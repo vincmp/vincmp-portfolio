@@ -1,11 +1,11 @@
 const DevProfile = () => {
   return (
-    <a href="/" className="flex items-center gap-4">
+    <a href="/" className="flex items-center gap-3">
       <div className="block">
         <img
           src="assets/images/vincmp.webp"
           alt="Início"
-          className="h-[68px] w-[68px] rounded-lg"
+          className="h-[68px] w-[68px] rounded-md"
         />
       </div>
       <div className="flex flex-col space-y-0.5">
