@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import DevProfile from "@/components/vincmp/Profile";
 
 export default function ResponsiveNav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -65,7 +66,7 @@ export default function ResponsiveNav() {
 
       {/* Desktop Sidebar */}
       <aside className="hidden lg:flex lg:flex-col lg:fixed lg:top-0 lg:left-0 lg:h-full lg:w-64 bg-white shadow-lg p-6 z-40">
-        <h2 className="text-2xl font-bold mb-6">Menu</h2>
+        <DevProfile />
         <nav className="flex flex-col space-y-4">{navLinks}</nav>
       </aside>
     </>

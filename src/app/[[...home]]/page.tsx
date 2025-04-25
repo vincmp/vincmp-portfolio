@@ -1,4 +1,4 @@
-import ResponsiveNav from "@/components/ResponsiveNav";
+import ResponsiveNav from "@/components/nav/ResponsiveNav";
 
 export default function Home() {
   return (
