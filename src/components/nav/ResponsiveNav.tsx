@@ -1,13 +1,14 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { usePathname } from 'next/navigation';
-import DevProfile from '@/components/vincmp/Profile';
-import { HomeIcon } from '@/components/nav/icons/HomeIcon';
-import { AboutIcon } from '@/components/nav/icons/AboutIcon';
-import { ProjectsIcon } from '@/components/nav/icons/ProjectsIcon';
-import { TechIcon } from '@/components/nav/icons/TechIcon';
-import { ContactIcon } from '@/components/nav/icons/ContactIcon';
+import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import DevProfile from "@/components/vincmp/Profile";
+import { usePathname } from "next/navigation";
+import { HomeIcon } from "@/components/nav/icons/HomeIcon";
+import { AboutIcon } from "@/components/nav/icons/AboutIcon";
+import { ProjectsIcon } from "@/components/nav/icons/ProjectsIcon";
+import { TechIcon } from "@/components/nav/icons/TechIcon";
+import { ContactIcon } from "@/components/nav/icons/ContactIcon";
 
 export default function ResponsiveNav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,46 +19,46 @@ export default function ResponsiveNav() {
       <a
         href="/"
         className={`nav-items lg:p-6 flex items-center gap-3 ${
-          pathname === '/' ? 'active' : ''
+          pathname === "/" ? "active" : ""
         }`}
       >
-        <HomeIcon isActive={pathname === '/'} />
+        <HomeIcon isActive={pathname === "/"} />
         Início
       </a>
       <a
         href="sobre"
         className={`nav-items lg:p-6 flex items-center gap-3 ${
-          pathname === '/sobre' ? 'active' : ''
+          pathname === "/sobre" ? "active" : ""
         }`}
       >
-        <AboutIcon isActive={pathname === '/sobre'} />
+        <AboutIcon isActive={pathname === "/sobre"} />
         Sobre
       </a>
       <a
         href="/projetos"
         className={`nav-items lg:p-6 flex items-center gap-3 ${
-          pathname === '/projetos' ? 'active' : ''
+          pathname === "/projetos" ? "active" : ""
         }`}
       >
-        <ProjectsIcon isActive={pathname === '/projetos'} />
+        <ProjectsIcon isActive={pathname === "/projetos"} />
         Projetos
       </a>
       <a
         href="/tecnologias"
         className={`nav-items lg:p-6 flex items-center gap-3 ${
-          pathname === '/tecnologias' ? 'active' : ''
+          pathname === "/tecnologias" ? "active" : ""
         }`}
       >
-        <TechIcon isActive={pathname === '/tecnologias'} />
+        <TechIcon isActive={pathname === "/tecnologias"} />
         Tecnologias
       </a>
       <a
         href="/contato"
         className={`nav-items lg:p-6 flex items-center gap-3 ${
-          pathname === '/contato' ? 'active' : ''
+          pathname === "/contato" ? "active" : ""
         }`}
       >
-        <ContactIcon isActive={pathname === '/contato'} />
+        <ContactIcon isActive={pathname === "/contato"} />
         Contato
       </a>
     </>
@@ -66,7 +67,7 @@ export default function ResponsiveNav() {
   return (
     <>
       {/* Mobile Navbar (top) */}
-      <div className="lg:hidden fixed top-0 left-0 right-0 bg-white z-50 flex items-center justify-between px-4 py-2">
+      <div className="lg:hidden fixed top-0 left-0 right-0 bg-white border-b-2 border-[#E6E6E6] z-50 flex items-center justify-between px-4 py-2">
         <div className="scale-[0.85] origin-left mb-1">
           <DevProfile />
           <div className="mt-1"></div>
@@ -101,13 +102,19 @@ export default function ResponsiveNav() {
       </div>
 
       {/* Mobile menu (dropdown) */}
-      {isOpen && (
-        <div className="lg:hidden fixed top-14 left-0 right-0 bg-white z-40 flex flex-col items-start space-y-4 p-4">
-          <div className="w-full border-b-2 border-[#E6E6E6] mb-4" />
-          {navLinks}
-          <div className="w-full border-b-2 border-[#E6E6E6] mb-4" />
-        </div>
-      )}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="lg:hidden fixed top-24 left-0 right-0 bg-white border-b-2 border-gray-200 z-40 overflow-hidden flex flex-col p-4 space-y-4"
+          >
+            {navLinks}
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Desktop Sidebar */}
       <aside className="hidden lg:flex lg:flex-col lg:fixed lg:top-0 lg:left-0 lg:h-full lg:w-80 bg-white border-r border-gray-200 p-6 z-40">
