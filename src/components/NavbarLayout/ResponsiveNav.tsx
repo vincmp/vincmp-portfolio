@@ -3,9 +3,9 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
-import DevProfile from "@/components/vincmp/MenuProfile";
-import SocialMidia from "@/components/vincmp/MenuSocials";
-import NavLinks from "@/components/nav/NavLinks";
+import DevProfile from "@/components/DevDetails/MenuProfile";
+import DevSocials from "@/components/DevDetails/MenuSocials";
+import NavLinks from "@/components/NavbarLayout/NavLinks";
 
 export default function ResponsiveNav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -84,7 +84,7 @@ function MobileMenu({
       </div>
       <div className="mt-auto pt-3 border-t-2 border-[#E6E6E6]">
         <div className="pt-3">
-          <SocialMidia />
+          <DevSocials />
         </div>
       </div>
     </motion.div>
@@ -103,7 +103,7 @@ function DesktopSidebar({ pathname }: { pathname: string }) {
       </nav>
       <div className="mt-auto pt-6 border-t-2 border-[#E6E6E6]">
         <div className="mt-6 mb-6">
-          <SocialMidia />
+          <DevSocials />
         </div>
       </div>
     </aside>

@@ -1,4 +1,4 @@
-import ResponsiveNav from "@/components/nav/ResponsiveNav";
+import ResponsiveNav from "@/components/NavbarLayout/ResponsiveNav";
 
 interface LayoutProps {
   children: React.ReactNode;

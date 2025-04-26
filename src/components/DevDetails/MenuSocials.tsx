@@ -1,8 +1,8 @@
 "use client";
 
-import { GitHub } from "@/components/vincmp/icons/GitHub";
-import { Linkedin } from "@/components/vincmp/icons/Linkedin";
-import { X } from "@/components/vincmp/icons/X";
+import { GitHub } from "@/components/DevDetails/DevSocialIcons/GitHub";
+import { Linkedin } from "@/components/DevDetails/DevSocialIcons/Linkedin";
+import { X } from "@/components/DevDetails/DevSocialIcons/X";
 
 const MenuSocialMidia = () => {
   return (
