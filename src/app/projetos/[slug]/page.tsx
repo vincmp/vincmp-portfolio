@@ -31,14 +31,14 @@ export async function generateMetadata({
   };
 }
 
-type Props = {
+type PageProps = {
   params: {
     slug: string;
   };
   searchParams?: Record<string, string | string[] | undefined>;
 };
 
-export default async function Page({ params }: Props) {
+export default async function Page({ params }: PageProps) {
   const { slug } = params;
 
   const fileContent = await fs.promises.readFile(
