@@ -30,11 +30,13 @@ export async function generateMetadata({
   };
 }
 
-export default async function ProjetoPage({
-  params,
-}: {
-  params: { slug: string };
-}) {
+type Props = {
+  params: {
+    slug: string;
+  };
+};
+
+export default async function Page({ params }: Props) {
   const { slug } = await params;
 
   const fileContent = await fs.promises.readFile(
