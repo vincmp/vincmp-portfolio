@@ -30,14 +30,15 @@ export async function generateMetadata({
   };
 }
 
-interface PageProps {
-  params: Promise<{
+type Props = {
+  params: {
     slug: string;
-  }>;
-}
+  };
+  searchParams?: Record<string, string | string[] | undefined>;
+};
 
-export default async function Page({ params }: PageProps) {
-  const { slug } = await params;
+export default async function Page({ params }: Props) {
+  const { slug } = params; // Remove the await here
 
   const fileContent = await fs.promises.readFile(
     path.join("content", "projetos", `${slug}.mdx`),
