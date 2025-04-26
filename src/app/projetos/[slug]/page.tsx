@@ -16,7 +16,7 @@ export async function generateMetadata({
 }: {
   params: { slug: string };
 }) {
-  const { slug } = await params;
+  const { slug } = params;
 
   const fileContent = await fs.promises.readFile(
     path.join("content", "projetos", `${slug}.mdx`),
@@ -38,7 +38,7 @@ type Props = {
 };
 
 export default async function Page({ params }: Props) {
-  const { slug } = params; // Remove the await here
+  const { slug } = params;
 
   const fileContent = await fs.promises.readFile(
     path.join("content", "projetos", `${slug}.mdx`),
