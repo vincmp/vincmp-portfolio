@@ -30,13 +30,13 @@ export async function generateMetadata({
   };
 }
 
-type Props = {
-  params: {
+interface PageProps {
+  params: Promise<{
     slug: string;
-  };
-};
+  }>;
+}
 
-export default async function Page({ params }: Props) {
+export default async function Page({ params }: PageProps) {
   const { slug } = await params;
 
   const fileContent = await fs.promises.readFile(
