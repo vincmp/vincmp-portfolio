@@ -3,7 +3,6 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import PageLayout from "@/components/PageLayout/Layout";
-import PageProps from "next";
 
 // Função para gerar os parâmetros estáticos
 export async function generateStaticParams() {
