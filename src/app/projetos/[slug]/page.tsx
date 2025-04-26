@@ -31,9 +31,15 @@ export async function generateMetadata({
   };
 }
 
-// A função de página que vai tratar os parâmetros
-export default async function Page({ params }: { params: { slug: string } }) {
-  const { slug } = params;
+// Função de página que trata os parâmetros
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const resolvedParams = await params; // Resolva o parâmetro se for uma Promise
+
+  const { slug } = resolvedParams;
 
   const fileContent = await fs.promises.readFile(
     path.join("content", "projetos", `${slug}.mdx`),
