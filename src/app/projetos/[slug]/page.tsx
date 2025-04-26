@@ -3,7 +3,6 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import PageLayout from "@/components/PageLayout/Layout";
-import { GetServerSidePropsContext } from "next"; // Adjust this import if necessary
 
 // Função para gerar os parâmetros estáticos
 export async function generateStaticParams() {
@@ -32,15 +31,8 @@ export async function generateMetadata({
   };
 }
 
-type PageProps = {
-  params: {
-    slug: string;
-  };
-  searchParams?: Record<string, string | string[] | undefined>;
-};
-
-// Update your function to handle params properly in a Next.js way
-export default async function Page({ params }: PageProps) {
+// A função de página que vai tratar os parâmetros
+export default async function Page({ params }: { params: { slug: string } }) {
   const { slug } = params;
 
   const fileContent = await fs.promises.readFile(
