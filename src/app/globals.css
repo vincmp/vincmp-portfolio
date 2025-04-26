@@ -56,3 +56,11 @@
 .nav-items.active {
   color: #1a1a1a;
 }
+
+.socials-items {
+  color: #666666;
+}
+
+.socials-items:hover {
+  color: #1a1a1a;
+}

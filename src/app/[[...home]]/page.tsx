@@ -1,4 +1,4 @@
-import ResponsiveNav from '@/components/nav/ResponsiveNav';
+import ResponsiveNav from "@/components/nav/ResponsiveNav";
 
 export default function Home() {
   return (
@@ -9,7 +9,7 @@ export default function Home() {
         <p className="mt-4">
           Página responsiva com navbar no mobile e sidebar no desktop.
         </p>
-        <div style={{ height: '200vh' }}></div>
+        <div style={{ height: "200vh" }}></div>
       </div>
     </main>
   );
