@@ -3,6 +3,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import PageLayout from "@/components/PageLayout/Layout";
+import { GetServerSidePropsContext } from "next"; // Adjust this import if necessary
 
 // Função para gerar os parâmetros estáticos
 export async function generateStaticParams() {
@@ -38,6 +39,7 @@ type PageProps = {
   searchParams?: Record<string, string | string[] | undefined>;
 };
 
+// Update your function to handle params properly in a Next.js way
 export default async function Page({ params }: PageProps) {
   const { slug } = params;
 
