@@ -4,7 +4,6 @@ import path from "path";
 import matter from "gray-matter";
 import PageLayout from "@/components/PageLayout/Layout";
 
-// Função para gerar os parâmetros estáticos
 export async function generateStaticParams() {
   const files = await fs.promises.readdir(path.join("content", "projetos"));
   return files.map((filename) => ({
@@ -12,12 +11,12 @@ export async function generateStaticParams() {
   }));
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { slug: string };
-}) {
-  const { slug } = params;
+type Props = {
+  params: Promise<{ slug: string }>;
+};
+
+export async function generateMetadata({ params }: Props) {
+  const { slug } = await params;
 
   const fileContent = await fs.promises.readFile(
     path.join("content", "projetos", `${slug}.mdx`),
@@ -31,15 +30,8 @@ export async function generateMetadata({
   };
 }
 
-// Função de página que trata os parâmetros
-export default async function Page({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
-  const resolvedParams = await params; // Resolva o parâmetro se for uma Promise
-
-  const { slug } = resolvedParams;
+export default async function ProjetoPage({ params }: Props) {
+  const { slug } = await params;
 
   const fileContent = await fs.promises.readFile(
     path.join("content", "projetos", `${slug}.mdx`),
