@@ -11,9 +11,9 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.vincmp.dev/"),
   title: "Vicente M | Desenvolvedor Full Stack",
   description:
-    "Portfólio profissional de Vicente Matheus, desenvolvedor Full Stack especializado em criar soluções web modernas e eficientes",
+    "Portfólio profissional de Vicente Matheus, desenvolvedor Full Stack com experiência em React, Next.js, TypeScript e Node.js. Especializado em criar aplicações web modernas, performáticas e escaláveis.",
   keywords:
-    "desenvolvedor full stack, programador web, nextjs, react, typescript, portfolio desenvolvedor",
+    "desenvolvedor full stack, programador web, desenvolvedor frontend, backend, javascript, reactjs, typescript, nodejs, portfólio dev, aplicações web, Vicente Matheus, Vincmp",
   authors: [{ name: "Vicente M" }],
   creator: "Vicente M",
   robots: "index, follow",
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     url: "https://www.vincmp.dev/",
     title: "Vicente M | Desenvolvedor Full Stack",
     description:
-      "Portfólio profissional de Vicente Matheus, desenvolvedor Full Stack especializado em criar soluções web modernas e eficientes",
+      "Portfólio profissional de Vicente Matheus, desenvolvedor Full Stack com experiência em React, Next.js, TypeScript e Node.js. Especializado em criar aplicações web modernas, performáticas e escaláveis.",
     siteName: "Portfolio Vicente M",
     images: [
       {
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Vicente M | Desenvolvedor Full Stack",
     description:
-      "Portfólio profissional de Vicente Matheus, desenvolvedor Full Stack especializado em criar soluções web modernas e eficientes",
+      "Portfólio profissional de Vicente Matheus, desenvolvedor Full Stack com experiência em React, Next.js, TypeScript e Node.js. Especializado em criar aplicações web modernas, performáticas e escaláveis.",
     images: ["/assets/images/summarycard.webp"],
   },
 };
@@ -84,6 +84,24 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Vicente Matheus",
+              jobTitle: "Full Stack Developer",
+              url: "https://www.vincmp.dev/",
+              sameAs: [
+                "https://github.com/vincmp",
+                "https://www.linkedin.com/in/vincmpimenta/",
+              ],
+            }),
+          }}
+        />
+      </head>
       <body>{children}</body>
     </html>
   );
