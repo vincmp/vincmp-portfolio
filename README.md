@@ -8,11 +8,11 @@
 
 ## Built with:
 
-- Next.js — Framework React com foco em performance e SEO.
-- TypeScript — Superset JavaScript com tipagem estática.
-- Tailwind CSS — Framework CSS para estilização de componentes.
-- MDX — Linguagem de marcação que permite combinar conteúdo escrito com código JavaScript/TypeScript.
-- Vercel — Plataforma de hospedagem para aplicações web.
+- Next.js — React framework focused on performance and SEO.
+- TypeScript — JavaScript superset with static typing.
+- Tailwind CSS — CSS framework for styling components.
+- MDX — A markup language that allows combining written content with JavaScript/TypeScript code.
+- Vercel — Hosting platform for web applications.
 
 ## Features:
 
