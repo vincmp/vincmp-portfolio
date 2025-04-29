@@ -29,6 +29,11 @@ export const metadata: Metadata = {
         sizes: "32x32",
         type: "image/png",
       },
+      {
+        url: "/assets/favicon/favicon.ico",
+        sizes: "any",
+        type: "image/x-icon",
+      },
     ],
     apple: [
       {
@@ -37,7 +42,13 @@ export const metadata: Metadata = {
         type: "image/png",
       },
     ],
-    shortcut: "/assets/favicon/favicon.ico",
+    shortcut: ["/assets/favicon/favicon-16x16.png"],
+    other: [
+      {
+        rel: "icon",
+        url: "/assets/favicon/favicon-16x16.png",
+      },
+    ],
   },
   manifest: "/assets/favicon/site.webmanifest",
   openGraph: {
