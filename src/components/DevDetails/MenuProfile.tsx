@@ -19,7 +19,7 @@ const DevProfile = () => {
           <p className="dev-desc leading-tight">
             Desenvolvedor
             <br />
-            WEB e Back-End!
+            Full Stack
           </p>
         </div>
       </a>
