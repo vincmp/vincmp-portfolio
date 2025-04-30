@@ -11,7 +11,7 @@ export function HomeIcon({ isActive = false }: HomeIconProps) {
           : "group-hover:scale-110 group-hover:text-primary"
       }`}
       viewBox="0 0 256 256"
-      fill={isActive ? "#1a1a1a" : "currentColor"}
+      fill={isActive ? "var(--text-primary)" : "currentColor"}
     >
       {isActive ? (
         <path d="M218.83,103.77l-80-75.48a1.14,1.14,0,0,1-.13-.13,16,16,0,0,0-21.4,0l-.13.13-80,75.48A16,16,0,0,0,32,115.54V208a16,16,0,0,0,16,16H96a16,16,0,0,0,16-16V164a4,4,0,0,1,4-4h24a4,4,0,0,1,4,4v44a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V115.54A16,16,0,0,0,218.83,103.77Z" />

@@ -21,7 +21,7 @@
 - SEO Optimization.
 - High Performance.
 - Blog system using MDX.
-- Light and Dark Mode (In Development).
+- Light and Dark Mode.
 
 ## License:
 

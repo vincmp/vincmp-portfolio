@@ -11,7 +11,7 @@ export function TechIcon({ isActive = false }: TechIconProps) {
           : "group-hover:scale-110 group-hover:text-primary"
       }`}
       viewBox="0 0 256 256"
-      fill={isActive ? "#1a1a1a" : "currentColor"}
+      fill={isActive ? "var(--text-primary)" : "currentColor"}
     >
       {isActive ? (
         <>

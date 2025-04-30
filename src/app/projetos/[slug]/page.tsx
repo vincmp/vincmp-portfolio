@@ -58,7 +58,7 @@ export default async function ProjetoPage({ params }: Props) {
 
   return (
     <PageLayout>
-      <article className="prose prose-lg max-w-none">
+      <article className="prose prose-lg max-w-none mdx-content">
         <MDXRemote source={content} />
       </article>
     </PageLayout>

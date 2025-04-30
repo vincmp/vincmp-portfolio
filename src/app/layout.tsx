@@ -1,11 +1,6 @@
-import type { Metadata, Viewport } from "next";
 import "./globals.css";
-
-export const viewport: Viewport = {
-  width: "device-width",
-  initialScale: 1,
-  themeColor: "#FFFFFF",
-};
+import { ThemeProvider } from "@/components/ThemeChanger/ThemeProvider";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.vincmp.dev/"),
@@ -102,7 +97,9 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body>{children}</body>
+      <body suppressHydrationWarning={true}>
+        <ThemeProvider>{children}</ThemeProvider>
+      </body>
     </html>
   );
 }
