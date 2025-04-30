@@ -24,19 +24,21 @@ export async function generateMetadata({ params }: Props) {
   );
   const { data } = matter(fileContent);
 
+  const pageTitle = `Vicente M | ${data.title}`;
+
   return {
-    title: data.title,
+    title: pageTitle,
     description: data.description,
     openGraph: {
-      title: data.title,
+      title: pageTitle,
       description: data.description,
       type: "article",
       publishedTime: data.date,
-      authors: ["Seu Nome"],
+      authors: ["Vicente M"],
     },
     twitter: {
       card: "summary_large_image",
-      title: data.title,
+      title: pageTitle,
       description: data.description,
     },
     alternates: {
