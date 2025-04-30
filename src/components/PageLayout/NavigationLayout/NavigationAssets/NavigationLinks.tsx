@@ -1,17 +1,19 @@
 "use client";
 
-import { HomeIcon } from "@/components/NavbarLayout/NavBarIcons/HomeIcon";
-import { AboutIcon } from "@/components/NavbarLayout/NavBarIcons/AboutIcon";
-import { ProjectsIcon } from "@/components/NavbarLayout/NavBarIcons/ProjectsIcon";
-import { TechIcon } from "@/components/NavbarLayout/NavBarIcons/TechIcon";
-import { ContactIcon } from "@/components/NavbarLayout/NavBarIcons/ContactIcon";
+import { HomeIcon } from "@/Components/PageLayout/NavigationLayout/NavigationAssets/NavigationIcons/HomeIcon";
+import { AboutIcon } from "@/Components/PageLayout/NavigationLayout/NavigationAssets/NavigationIcons/AboutIcon";
+import { ProjectsIcon } from "@/Components/PageLayout/NavigationLayout/NavigationAssets/NavigationIcons/ProjectsIcon";
+import { TechIcon } from "@/Components/PageLayout/NavigationLayout/NavigationAssets/NavigationIcons/TechIcon";
+import { ContactIcon } from "@/Components/PageLayout/NavigationLayout/NavigationAssets/NavigationIcons/ContactIcon";
 
 export default function NavLinks({
   pathname,
   setIsOpen,
+  isExpanded = true,
 }: {
   pathname: string | null;
   setIsOpen?: (isOpen: boolean) => void;
+  isExpanded?: boolean;
 }) {
   const handleClick = () => {
     if (setIsOpen) setIsOpen(false);
@@ -24,10 +26,11 @@ export default function NavLinks({
         onClick={handleClick}
         className={`nav-items group lg:p-6 flex items-center gap-3 ${
           pathname === "/" ? "active" : ""
-        }`}
+        } ${!isExpanded ? "justify-center" : ""}`}
+        title={!isExpanded ? "Início" : undefined}
       >
         <HomeIcon isActive={pathname === "/"} />
-        Início
+        {isExpanded && "Início"}
       </a>
 
       <a
@@ -35,10 +38,11 @@ export default function NavLinks({
         onClick={handleClick}
         className={`nav-items group lg:p-6 flex items-center gap-3 ${
           pathname === "/sobre" ? "active" : ""
-        }`}
+        } ${!isExpanded ? "justify-center" : ""}`}
+        title={!isExpanded ? "Sobre" : undefined}
       >
         <AboutIcon isActive={pathname === "/sobre"} />
-        Sobre
+        {isExpanded && "Sobre"}
       </a>
 
       <a
@@ -46,10 +50,11 @@ export default function NavLinks({
         onClick={handleClick}
         className={`nav-items group lg:p-6 flex items-center gap-3 ${
           pathname === "/projetos" ? "active" : ""
-        }`}
+        } ${!isExpanded ? "justify-center" : ""}`}
+        title={!isExpanded ? "Projetos" : undefined}
       >
         <ProjectsIcon isActive={pathname === "/projetos"} />
-        Projetos
+        {isExpanded && "Projetos"}
       </a>
 
       <a
@@ -57,10 +62,11 @@ export default function NavLinks({
         onClick={handleClick}
         className={`nav-items group lg:p-6 flex items-center gap-3 ${
           pathname === "/tecnologias" ? "active" : ""
-        }`}
+        } ${!isExpanded ? "justify-center" : ""}`}
+        title={!isExpanded ? "Tecnologias" : undefined}
       >
         <TechIcon isActive={pathname === "/tecnologias"} />
-        Tecnologias
+        {isExpanded && "Tecnologias"}
       </a>
 
       <a
@@ -68,10 +74,11 @@ export default function NavLinks({
         onClick={handleClick}
         className={`nav-items group lg:p-6 flex items-center gap-3 ${
           pathname === "/contato" ? "active" : ""
-        }`}
+        } ${!isExpanded ? "justify-center" : ""}`}
+        title={!isExpanded ? "Contato" : undefined}
       >
         <ContactIcon isActive={pathname === "/contato"} />
-        Contato
+        {isExpanded && "Contato"}
       </a>
     </>
   );

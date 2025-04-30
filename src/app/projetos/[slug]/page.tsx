@@ -2,7 +2,7 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import PageLayout from "@/components/PageLayout/Layout";
+import PageLayout from "@/Components/PageLayout/PageLayout";
 
 export async function generateStaticParams() {
   const files = await fs.promises.readdir(path.join("content", "projetos"));

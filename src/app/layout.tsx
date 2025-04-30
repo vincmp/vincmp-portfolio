@@ -1,6 +1,7 @@
 import "./globals.css";
-import { ThemeProvider } from "@/components/ThemeChanger/ThemeProvider";
+import { ThemeProvider } from "@/Components/ThemeChanger/ThemeProvider";
 import type { Metadata } from "next";
+import { SidebarProvider } from "@/Components/PageLayout/NavigationLayout/SidebarContext";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.vincmp.dev/"),
@@ -74,9 +75,9 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="pt-BR">
       <head>
@@ -98,7 +99,9 @@ export default function RootLayout({
         />
       </head>
       <body suppressHydrationWarning={true}>
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          <SidebarProvider>{children}</SidebarProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

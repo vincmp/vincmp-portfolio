@@ -1,4 +1,4 @@
-import PageLayout from "@/components/PageLayout/Layout";
+import PageLayout from "@/Components/PageLayout/PageLayout";
 
 export default function Contato() {
   return (

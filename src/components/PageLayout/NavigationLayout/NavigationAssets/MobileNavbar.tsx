@@ -1,12 +1,11 @@
 "use client";
 
-import { useState, memo } from "react";
-import { AnimatePresence, motion } from "framer-motion";
-import { usePathname } from "next/navigation";
-import DevProfile from "@/components/DevDetails/MenuProfile";
-import DevSocials from "@/components/DevDetails/MenuSocials";
-import NavLinks from "@/components/NavbarLayout/NavLinks";
-import ThemeChanger from "@/components/ThemeChanger/ThemeChanger";
+import { memo } from "react";
+import { motion } from "framer-motion";
+import DevProfile from "@/Components/DevInfo/MenuProfile";
+import ThemeChanger from "@/Components/ThemeChanger/ThemeChanger";
+import NavLinks from "@/Components/PageLayout/NavigationLayout/NavigationAssets/NavigationLinks";
+import DevSocials from "@/Components/DevInfo/MenuSocials";
 
 const SandwichButton = ({
   isOpen,
@@ -85,43 +84,7 @@ const MobileMenu = memo(
   }
 );
 
-const DesktopSidebar = memo(({ pathname }: { pathname: string }) => {
-  return (
-    <aside className="hidden lg:flex lg:flex-col lg:fixed lg:top-0 lg:left-0 lg:h-full lg:w-80 bg-[var(--bg-primary)] border-r border-[var(--border-color)] p-6 z-40">
-      <div className="mt-6">
-        <div className="flex items-center justify-between">
-          <DevProfile />
-          <ThemeChanger />
-        </div>
-        <div className="border-b-2 border-[var(--border-color)] mt-12" />
-      </div>
-      <nav className="flex flex-col mt-6">
-        <NavLinks pathname={pathname} />
-      </nav>
-      <div className="mt-auto pt-6 border-t-2 border-[var(--border-color)]">
-        <div className="mt-6 mb-6">
-          <DevSocials />
-        </div>
-      </div>
-    </aside>
-  );
-});
-
 MobileNavbar.displayName = "MobileNavbar";
 MobileMenu.displayName = "MobileMenu";
-DesktopSidebar.displayName = "DesktopSidebar";
 
-export default function ResponsiveNav() {
-  const [isOpen, setIsOpen] = useState(false);
-  const pathname = usePathname();
-
-  return (
-    <>
-      <MobileNavbar isOpen={isOpen} toggleMenu={() => setIsOpen(!isOpen)} />
-      <AnimatePresence>
-        {isOpen && <MobileMenu pathname={pathname} setIsOpen={setIsOpen} />}
-      </AnimatePresence>
-      <DesktopSidebar pathname={pathname} />
-    </>
-  );
-}
+export { MobileNavbar, MobileMenu };
