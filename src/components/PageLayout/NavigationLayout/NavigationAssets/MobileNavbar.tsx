@@ -2,10 +2,10 @@
 
 import { memo } from "react";
 import { motion } from "framer-motion";
-import DevProfile from "@/Components/DevInfo/MenuProfile";
-import ThemeChanger from "@/Components/ThemeChanger/ThemeChanger";
-import NavLinks from "@/Components/PageLayout/NavigationLayout/NavigationAssets/NavigationLinks";
-import DevSocials from "@/Components/DevInfo/MenuSocials";
+import DevProfile from "@/components/DevInfo/MenuProfile";
+import ThemeChanger from "@/components/ThemeChanger/ThemeChanger";
+import NavLinks from "@/components/PageLayout/NavigationLayout/NavigationAssets/NavigationLinks";
+import DevSocials from "@/components/DevInfo/MenuSocials";
 
 const SandwichButton = ({
   isOpen,

@@ -1,11 +1,11 @@
 "use client";
 
 import { memo } from "react";
-import DevProfile from "@/Components/DevInfo/MenuProfile";
-import DevSocials from "@/Components/DevInfo/MenuSocials";
-import NavLinks from "@/Components/PageLayout/NavigationLayout/NavigationAssets/NavigationLinks";
-import ThemeChanger from "@/Components/ThemeChanger/ThemeChanger";
-import { useSidebar } from "@/Components/PageLayout/NavigationLayout/SidebarContext";
+import DevProfile from "@/components/DevInfo/MenuProfile";
+import DevSocials from "@/components/DevInfo/MenuSocials";
+import NavLinks from "@/components/PageLayout/NavigationLayout/NavigationAssets/NavigationLinks";
+import ThemeChanger from "@/components/ThemeChanger/ThemeChanger";
+import { useSidebar } from "@/components/PageLayout/NavigationLayout/SidebarContext";
 
 const DesktopSidebar = memo(({ pathname }: { pathname: string }) => {
   const { isExpanded, isLoading, setIsExpanded } = useSidebar();

@@ -1,8 +1,8 @@
 "use client";
 
-import { GitHub } from "@/Components/DevInfo/DevSocialIcons/GitHub";
-import { Linkedin } from "@/Components/DevInfo/DevSocialIcons/Linkedin";
-import { X } from "@/Components/DevInfo/DevSocialIcons/X";
+import { GitHub } from "@/components/DevInfo/DevSocialIcons/GitHub";
+import { Linkedin } from "@/components/DevInfo/DevSocialIcons/Linkedin";
+import { X } from "@/components/DevInfo/DevSocialIcons/X";
 
 const MenuSocialMidia = ({ isExpanded = true }: { isExpanded?: boolean }) => {
   return (

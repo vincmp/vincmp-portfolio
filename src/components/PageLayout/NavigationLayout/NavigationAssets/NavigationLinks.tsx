@@ -1,10 +1,10 @@
 "use client";
 
-import { HomeIcon } from "@/Components/PageLayout/NavigationLayout/NavigationAssets/NavigationIcons/HomeIcon";
-import { AboutIcon } from "@/Components/PageLayout/NavigationLayout/NavigationAssets/NavigationIcons/AboutIcon";
-import { ProjectsIcon } from "@/Components/PageLayout/NavigationLayout/NavigationAssets/NavigationIcons/ProjectsIcon";
-import { TechIcon } from "@/Components/PageLayout/NavigationLayout/NavigationAssets/NavigationIcons/TechIcon";
-import { ContactIcon } from "@/Components/PageLayout/NavigationLayout/NavigationAssets/NavigationIcons/ContactIcon";
+import { HomeIcon } from "@/components/PageLayout/NavigationLayout/NavigationAssets/NavigationIcons/HomeIcon";
+import { AboutIcon } from "@/components/PageLayout/NavigationLayout/NavigationAssets/NavigationIcons/AboutIcon";
+import { ProjectsIcon } from "@/components/PageLayout/NavigationLayout/NavigationAssets/NavigationIcons/ProjectsIcon";
+import { TechIcon } from "@/components/PageLayout/NavigationLayout/NavigationAssets/NavigationIcons/TechIcon";
+import { ContactIcon } from "@/components/PageLayout/NavigationLayout/NavigationAssets/NavigationIcons/ContactIcon";
 
 export default function NavLinks({
   pathname,

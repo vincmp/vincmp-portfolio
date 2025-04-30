@@ -1,4 +1,4 @@
-import PageLayout from "@/Components/PageLayout/PageLayout";
+import PageLayout from "@/components/PageLayout/PageLayout";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";

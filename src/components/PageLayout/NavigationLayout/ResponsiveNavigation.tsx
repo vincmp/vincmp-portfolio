@@ -3,11 +3,11 @@
 import { useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
-import DesktopSidebar from "@/Components/PageLayout/NavigationLayout/NavigationAssets/DesktopSidebar";
+import DesktopSidebar from "@/components/PageLayout/NavigationLayout/NavigationAssets/DesktopSidebar";
 import {
   MobileNavbar,
   MobileMenu,
-} from "@/Components/PageLayout/NavigationLayout/NavigationAssets/MobileNavbar";
+} from "@/components/PageLayout/NavigationLayout/NavigationAssets/MobileNavbar";
 
 export default function ResponsiveNav() {
   const [isOpen, setIsOpen] = useState(false);

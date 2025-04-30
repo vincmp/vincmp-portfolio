@@ -1,7 +1,7 @@
 import "./globals.css";
-import { ThemeProvider } from "@/Components/ThemeChanger/ThemeProvider";
+import { ThemeProvider } from "@/components/ThemeChanger/ThemeProvider";
 import type { Metadata } from "next";
-import { SidebarProvider } from "@/Components/PageLayout/NavigationLayout/SidebarContext";
+import { SidebarProvider } from "@/components/PageLayout/NavigationLayout/SidebarContext";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.vincmp.dev/"),

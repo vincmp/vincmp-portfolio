@@ -1,8 +1,8 @@
 "use client";
 // Vercel dont understanded my inicial commit :/
-import ResponsiveNav from "@/Components/PageLayout/NavigationLayout/ResponsiveNavigation";
-import PageFooter from "@/Components/PageLayout/PageFooter";
-import { useSidebar } from "@/Components/PageLayout/NavigationLayout/SidebarContext";
+import ResponsiveNav from "@/components/PageLayout/NavigationLayout/ResponsiveNavigation";
+import PageFooter from "@/components/PageLayout/PageFooter";
+import { useSidebar } from "@/components/PageLayout/NavigationLayout/SidebarContext";
 
 interface LayoutProps {
   children: React.ReactNode;
