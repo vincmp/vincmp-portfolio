@@ -1,13 +1,44 @@
 "use client";
 
-import { useState } from "react";
+import { useState, memo } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import DevProfile from "@/components/DevDetails/MenuProfile";
 import DevSocials from "@/components/DevDetails/MenuSocials";
 import NavLinks from "@/components/NavbarLayout/NavLinks";
 import ThemeChanger from "@/components/ThemeChanger/ThemeChanger";
-import { memo } from "react";
+
+const SandwichButton = ({
+  isOpen,
+  toggleMenu,
+}: {
+  isOpen: boolean;
+  toggleMenu: () => void;
+}) => {
+  return (
+    <button
+      onClick={toggleMenu}
+      className="relative w-8 h-8 flex items-center justify-center z-50"
+    >
+      <motion.span
+        className="absolute h-[1px] w-5 bg-[var(--text-primary)]"
+        animate={{
+          rotate: isOpen ? -45 : 0,
+          y: isOpen ? 0 : -4,
+        }}
+        transition={{ duration: 0.01 }}
+      />
+      <motion.span
+        className="absolute h-[1px] w-5 bg-[var(--text-primary)]"
+        animate={{
+          rotate: isOpen ? 45 : 0,
+          y: isOpen ? 0 : 4,
+        }}
+        transition={{ duration: 0.01 }}
+      />
+    </button>
+  );
+};
 
 const MobileNavbar = memo(
   ({ isOpen, toggleMenu }: { isOpen: boolean; toggleMenu: () => void }) => {
@@ -17,30 +48,7 @@ const MobileNavbar = memo(
           <DevProfile />
           <ThemeChanger />
         </div>
-        <button onClick={toggleMenu} className="focus:outline-none">
-          <svg
-            className="w-6 h-6"
-            fill="none"
-            stroke="var(--text-primary)"
-            viewBox="0 0 24 24"
-          >
-            {isOpen ? (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M6 18L18 6M6 6l12 12"
-              />
-            ) : (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            )}
-          </svg>
-        </button>
+        <SandwichButton isOpen={isOpen} toggleMenu={toggleMenu} />
       </div>
     );
   }
