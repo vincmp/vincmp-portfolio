@@ -96,6 +96,13 @@ export default function RootLayout({
             }),
           }}
         />
+        <style>
+          {`
+            :root {
+              --embed-border-color: #ffffff;
+            }
+          `}
+        </style>
       </head>
       <body suppressHydrationWarning={true}>
         <ThemeProvider>{children}</ThemeProvider>
