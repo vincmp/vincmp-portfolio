@@ -1,5 +1,5 @@
 "use client";
-
+// Vercel dont understanded my inicial commit :/
 import ResponsiveNav from "@/Components/PageLayout/NavigationLayout/ResponsiveNavigation";
 import PageFooter from "@/Components/PageLayout/PageFooter";
 import { useSidebar } from "@/Components/PageLayout/NavigationLayout/SidebarContext";
