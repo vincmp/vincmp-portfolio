@@ -27,6 +27,21 @@ export async function generateMetadata({ params }: Props) {
   return {
     title: data.title,
     description: data.description,
+    openGraph: {
+      title: data.title,
+      description: data.description,
+      type: "article",
+      publishedTime: data.date,
+      authors: ["Seu Nome"],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: data.title,
+      description: data.description,
+    },
+    alternates: {
+      canonical: `/projetos/${slug}`,
+    },
   };
 }
 
