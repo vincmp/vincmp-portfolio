@@ -67,7 +67,7 @@ const MobileMenu = memo(
         animate={{ height: "auto", opacity: 1 }}
         exit={{ height: 0, opacity: 1 }}
         transition={{ duration: 0.3 }}
-        className="lg:hidden fixed top-14 left-0 right-0 bg-[var(--bg-primary)] border-b-2 border-gray-200 z-40 overflow-hidden flex flex-col p-4 space-y-4"
+        className="lg:hidden fixed top-14 left-0 right-0 bg-[var(--bg-primary)] border-b-2 border-[var(--border-color)] z-40 overflow-hidden flex flex-col p-4 space-y-4"
       >
         <div className="pl-[25px] pb-[90px] pt-[56px]">
           <div className="flex flex-col [&>*]:py-[24px]">
