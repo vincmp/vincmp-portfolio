@@ -1,8 +1,8 @@
 "use client";
 
 import { memo } from "react";
-import DevProfile from "@/components/DevInfo/MenuProfile";
-import DevSocials from "@/components/DevInfo/MenuSocials";
+import DevProfile from "@/components/DeveloperProfile/DeveloperInfo";
+import DevSocials from "@/components/DeveloperProfile/DeveloperSocialMedia";
 import NavLinks from "@/components/PageLayout/NavigationLayout/NavigationAssets/NavigationLinks";
 import ThemeChanger from "@/components/ThemeChanger/ThemeChanger";
 import { useSidebar } from "@/components/PageLayout/NavigationLayout/SidebarContext";

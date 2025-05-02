@@ -37,14 +37,14 @@ export default async function Projetos() {
   return (
     <PageLayout>
       <h1 className="text-3xl font-bold mb-8 text-[var(--text-primary)]">
-        Meus Projetos
+        Histórico de Projetos:
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((project) => (
           <Link
             href={`/projetos/${project.slug}`}
             key={project.slug}
-            className="border border-[var(--border-color)] rounded-lg overflow-hidden hover:shadow-lg transition-shadow bg-[var(--bg-primary)]"
+            className="border-2 border-[var(--border-color)] rounded-lg overflow-hidden hover:shadow-lg transition-shadow bg-[var(--bg-primary)]"
           >
             {project.frontmatter.coverImage && (
               <div className="relative h-48 w-full">
