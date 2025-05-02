@@ -1,6 +1,7 @@
 import "./globals.css";
-import { ThemeProvider } from "@/components/ThemeChanger/ThemeProvider";
 import type { Metadata } from "next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { ThemeProvider } from "@/components/ThemeChanger/ThemeProvider";
 import { SidebarProvider } from "@/components/PageLayout/NavigationLayout/SidebarContext";
 
 export const metadata: Metadata = {
@@ -101,6 +102,7 @@ export default function RootLayout({
       <body suppressHydrationWarning={true}>
         <ThemeProvider>
           <SidebarProvider>{children}</SidebarProvider>
+          <SpeedInsights />
         </ThemeProvider>
       </body>
     </html>
