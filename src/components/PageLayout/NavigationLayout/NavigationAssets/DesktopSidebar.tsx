@@ -37,7 +37,7 @@ const DesktopSidebar = memo(({ pathname }: { pathname: string }) => {
         </div>
         <button
           onClick={toggleSidebar}
-          className="absolute -right-3 top-8 bg-[var(--bg-primary)] border border-[var(--border-color)] rounded-full p-1.5 hover:bg-[var(--bg-hover)]"
+          className="absolute -right-4 top-8 bg-[var(--bg-primary)] border-2 border-[var(--border-color)] rounded-md p-1.5 hover:bg-[var(--bg-hover)]"
         >
           <svg
             className={`w-4 h-4 transform transition-transform ${
