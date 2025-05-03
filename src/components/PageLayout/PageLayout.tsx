@@ -13,7 +13,7 @@ export default function Layout({ children }: LayoutProps) {
 
   if (isLoading) {
     return (
-      <div className="flex min-h-screen bg-[var(--bg-primary)]">
+      <div className="flex min-h-screen bg-[var(--bg-secondary)]">
         <div className="flex-1" />
       </div>
     );
@@ -23,7 +23,7 @@ export default function Layout({ children }: LayoutProps) {
     <div className="flex min-h-screen">
       <ResponsiveNav />
       <main
-        className={`flex-1 bg-[var(--bg-primary)] pt-28 lg:pt-0 transition-all duration-300 ${
+        className={`flex-1 bg-[var(--bg-secondary)] pt-28 lg:pt-0 transition-all duration-300 ${
           isExpanded ? "lg:ml-80" : "lg:ml-20"
         }`}
       >

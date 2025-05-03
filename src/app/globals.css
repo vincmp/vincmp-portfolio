@@ -3,21 +3,28 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "Inter-Light";
+  font-family: "InterLight";
   src: url("/assets/fonts/InterLight.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Inter-Regular";
+  font-family: "InterMedium";
+  src: url("/assets/fonts/InterMedium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "InterRegular";
   src: url("/assets/fonts/InterRegular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Inter-SemiBold";
+  font-family: "InterSemiBold";
   src: url("/assets/fonts/InterSemiBold.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
@@ -27,7 +34,9 @@
   /* Cores do tema claro (padrão) */
   --text-primary: #1a1a1a;
   --text-secondary: #666666;
+  --text-pageParagraph: #4d4d4d;
   --bg-primary: #ffffff;
+  --bg-secondary: #f2f2f2;
   --bg-hover: #f7f7f7;
   --border-color: #e6e6e6;
   --mdx-heading: #1a1a1a;
@@ -41,7 +50,9 @@
   /* Cores do tema escuro */
   --text-primary: #ffffff;
   --text-secondary: #a0a0a0;
+  --text-pageParagraph: #b3b3b3;
   --bg-primary: #1a1a1a;
+  --bg-secondary: #242424;
   --bg-hover: #2d2d2d;
   --border-color: #2d2d2d;
   --mdx-heading: #ffffff;
@@ -78,7 +89,7 @@
 /* Classes principais */
 .dev-name {
   font-size: 18px !important;
-  font-family: "Inter-SemiBold", sans-serif;
+  font-family: "InterSemiBold", sans-serif;
   color: var(--text-primary);
   line-height: 21.6px !important;
   letter-spacing: 0.03em !important;
@@ -87,15 +98,44 @@
 
 .dev-desc {
   font-size: 14px !important;
-  font-family: "Inter-Light", sans-serif;
+  font-family: "InterLight", sans-serif;
   color: var(--text-secondary);
   line-height: 16.8px !important;
   letter-spacing: 0.02em !important;
 }
 
+.page-Title {
+  font-size: 40px !important;
+  font-family: "InterMedium", sans-serif;
+  color: var(--text-primary);
+}
+
+.page-Paragraph {
+  font-size: 16px !important;
+  font-family: "InterRegular", sans-serif;
+  color: var(--text-pageParagraph);
+  line-height: 22.4px !important;
+  letter-spacing: 0.02em !important;
+  margin-top: 25 !important;
+}
+
+.Tech-Title {
+  font-size: 16px !important;
+  font-family: "InterMedium", sans-serif;
+  color: var(--text-primary);
+  line-height: 22.4px !important;
+}
+
+.Tech-Paragraph {
+  font-size: 14px !important;
+  font-family: "InterRegular", sans-serif;
+  color: var(--text-secondary);
+  line-height: 19.6px !important;
+}
+
 .nav-items {
   font-size: 15px !important;
-  font-family: "Inter-Regular", sans-serif;
+  font-family: "InterRegular", sans-serif;
   color: var(--text-secondary);
   line-height: 16.8px !important;
   letter-spacing: 0.02em !important;
@@ -122,7 +162,7 @@
 
 .pagefooter-text {
   font-size: 12px !important;
-  font-family: "Inter-Regular", sans-serif;
+  font-family: "InterRegular", sans-serif;
   color: var(--text-secondary);
   line-height: 14.4px !important;
   letter-spacing: 0.02em !important;
