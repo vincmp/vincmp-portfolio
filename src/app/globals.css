@@ -136,7 +136,7 @@
 .nav-items {
   font-size: 15px !important;
   font-family: "InterRegular", sans-serif;
-  color: var(--text-secondary);
+  color: var(--text-pageParagraph);
   line-height: 16.8px !important;
   letter-spacing: 0.02em !important;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);

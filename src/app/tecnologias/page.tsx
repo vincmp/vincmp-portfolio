@@ -1,5 +1,11 @@
 import PageLayout from "@/components/PageLayout/PageLayout";
-import DevelopmentTools from "@/components/TechDetails/DevelopmentTools";
+import Trae from "@/components/TechDetails/DevelopmentTools/Trae";
+import JBRider from "@/components/TechDetails/DevelopmentTools/JBRider";
+import BeekeeperST from "@/components/TechDetails/DevelopmentTools/BeekeeperST";
+import GitHub from "@/components/TechDetails/DevelopmentTools/GitHub";
+import Vercel from "@/components/TechDetails/DevelopmentTools/Vercel";
+import NextJS from "@/components/TechDetails/WebDevelopment/NextJS";
+import TailwindCSS from "@/components/TechDetails/WebDevelopment/TailwindCSS";
 
 export default function Tech() {
   return (
@@ -13,8 +19,26 @@ export default function Tech() {
           bem estruturadas, acessíveis e com foco em desempenho, sempre aliando
           boas práticas de código e experiência do usuário.
         </p>
-        <div className="bg-[var(--bg-primary)] mt-8 rounded-lg grid grid-cols-1 lg:grid-cols-2 gap-6">
-          <DevelopmentTools />
+        <div className="bg-[var(--bg-primary)] mt-8 rounded-lg">
+          <h4 className="Tech-Title p-6 pb-2">
+            Ferramentas de Desenvolvimento
+          </h4>
+          <div className="grid grid-cols-1 lg:grid-cols-2 p-6 pt-2 gap-4 mb-4">
+            <Trae />
+            <JBRider />
+            <BeekeeperST />
+            <GitHub />
+            <Vercel />
+          </div>
+          <h4 className="Tech-Title p-6 pb-2">Desenvolvimento Web</h4>
+          <div className="grid grid-cols-1 lg:grid-cols-2 p-6 pt-2 gap-4 mb-4">
+            <NextJS />
+            <TailwindCSS />
+          </div>
+          <h4 className="Tech-Title p-6 pb-2">Desenvolvimento de Aplicações</h4>
+          <div className="grid grid-cols-1 lg:grid-cols-2 p-6 pt-2 gap-4 mb-4"></div>
+          <h4 className="Tech-Title p-6 pb-2">Banco de Dados</h4>
+          <div className="grid grid-cols-1 lg:grid-cols-2 p-6 pt-2 gap-4 mb-4"></div>
         </div>
       </div>
     </PageLayout>
