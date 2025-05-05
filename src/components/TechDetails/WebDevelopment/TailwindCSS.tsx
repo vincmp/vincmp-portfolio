@@ -15,9 +15,9 @@ export default function TailwindCSS() {
         <h4 className="Tech-Title">Tailwind CSS</h4>
       </div>
       <p className="Tech-Paragraph mt-4">
-        Tailwind CSS é meu framework de escolha para estilização de interfaces.
-        Adoto sua abordagem utilitária para desenvolver layouts responsivos e
-        consistentes com agilidade e padronização.
+        Tailwind CSS é minha escolha para estilização de interfaces, com uma
+        abordagem utilitária que permite criar layouts responsivos, consistentes
+        e ágeis, mantendo padronização.
       </p>
     </div>
   );

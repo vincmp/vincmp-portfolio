@@ -15,9 +15,9 @@ export default function BeekeeperST() {
         <h4 className="Tech-Title">Beekeeper Studio</h4>
       </div>
       <p className="Tech-Paragraph mt-4">
-        Beekeeper Studio é a ferramenta que utilizo para gerenciar bancos de
-        dados SQL. Sua interface intuitiva e suporte a múltiplos SGBDs tornam a
-        manipulação de dados eficiente e confiável.
+        Adoto o Beekeeper Studio para gerenciamento de bancos de dados SQL. Sua
+        interface intuitiva e suporte a múltiplos SGBDs garantem eficiência e
+        confiabilidade na manipulação de dados.
       </p>
     </div>
   );

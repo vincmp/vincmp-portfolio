@@ -23,9 +23,9 @@ export default function GitHub() {
         <h4 className="Tech-Title">Git & GitHub</h4>
       </div>
       <p className="Tech-Paragraph mt-4">
-        Git e GitHub fazem parte essencial do meu fluxo de desenvolvimento.
-        Utilizo-os para versionamento distribuído, revisão de código e
-        colaboração eficiente em equipes e projetos open source.
+        Git e GitHub são fundamentais no meu fluxo de trabalho, utilizados para
+        versionamento, revisão de código e colaboração eficiente em projetos
+        individuais, em equipe ou open source.
       </p>
     </div>
   );

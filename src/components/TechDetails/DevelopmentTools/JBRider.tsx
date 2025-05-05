@@ -15,10 +15,10 @@ export default function JBRider() {
         <h4 className="Tech-Title">JetBrains Rider</h4>
       </div>
       <p className="Tech-Paragraph mt-4">
-        JetBrains Rider é minha IDE de referência para desenvolvimento em C# e
-        .NET. Oferece recursos avançados de refatoração, depuração e integração
-        profunda com o ecossistema Microsoft, otimizando o desenvolvimento de
-        aplicações robustas.
+        JetBrains Rider é minha IDE de escolha para projetos em C# e .NET. Com
+        recursos avançados de refatoração, depuração e integração com o
+        ecossistema Microsoft, facilita o desenvolvimento de aplicações robustas
+        e escaláveis.
       </p>
     </div>
   );

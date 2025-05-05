@@ -24,8 +24,8 @@ export default function NextJS() {
       </div>
       <p className="Tech-Paragraph mt-4">
         Next.js é meu framework principal para desenvolvimento web full-stack.
-        Com suporte a renderização no servidor, rotas de API e performance
-        otimizada, é ideal para aplicações modernas e escaláveis.
+        Oferece renderização no servidor, rotas de API e otimização de
+        performance, ideal para aplicações modernas e escaláveis.
       </p>
     </div>
   );

@@ -15,9 +15,9 @@ export default function Trae() {
         <h4 className="Tech-Title">Trae</h4>
       </div>
       <p className="Tech-Paragraph mt-4">
-        Utilizo o Trae como editor principal em projetos que exigem leveza e
-        agilidade. Sua interface moderna e fluida contribui para um fluxo de
-        trabalho mais produtivo e centrado no código.
+        Utilizo o Trae como editor principal em projetos que demandam leveza e
+        agilidade. Sua interface moderna e fluida otimiza a produtividade e o
+        foco no desenvolvimento.
       </p>
     </div>
   );

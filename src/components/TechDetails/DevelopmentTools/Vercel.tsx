@@ -23,10 +23,9 @@ export default function Vercel() {
         <h4 className="Tech-Title">Vercel</h4>
       </div>
       <p className="Tech-Paragraph mt-4">
-        Emprego o Vercel para deploy e hospedagem de aplicações web,
-        especialmente aquelas desenvolvidas com Next.js. A integração contínua,
-        aliada a uma infraestrutura global, garante performance e
-        escalabilidade.
+        UtilizoCantools o Vercel para hospedagem e deploy de aplicações web, com
+        foco em projetos Next.js. Sua integração contínua e infraestrutura
+        global asseguram alta performance e escalabilidade.
       </p>
     </div>
   );
